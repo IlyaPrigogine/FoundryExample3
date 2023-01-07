@@ -1,0 +1,160 @@
+{
+  "address": "0x6d332025fCCeFA60e7801036AeC6e9ea4Dd9F32E",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_name",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_description",
+          "type": "string"
+        },
+        {
+          "internalType": "address",
+          "name": "_nft",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "description",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "identify",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "name",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "nft",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0xef07adf638ca786451abc3728b1195b8a0436e326ab08b90906789c798554325",
+  "receipt": {
+    "to": null,
+    "from": "0x1fD0A4b25D83461fF6963a718aE631C96453DF55",
+    "contractAddress": "0x6d332025fCCeFA60e7801036AeC6e9ea4Dd9F32E",
+    "transactionIndex": 2,
+    "gasUsed": "397694",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x8bdd2bdceb75ee84d3f8aeb29b045edd976402f7f05d03c7fe7e9e4849735d22",
+    "transactionHash": "0xef07adf638ca786451abc3728b1195b8a0436e326ab08b90906789c798554325",
+    "logs": [],
+    "blockNumber": 8219828,
+    "cumulativeGasUsed": "474705",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "Identifier-NFT-VIP",
+    "Hold SD VIP NFT to experience extraordinary functions.",
+    "0xdcCEc80F1E323E7Fd697bF53D52BFCdE92059f72"
+  ],
+  "numDeployments": 1,
+  "solcInputHash": "2875952293fc18e799d56a583ebbd071",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.13+commit.abaa5c0e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"string\",\"name\":\"_name\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_description\",\"type\":\"string\"},{\"internalType\":\"address\",\"name\":\"_nft\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"description\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"identify\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"nft\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/identifier/SDIdentifierNFT.sol\":\"SDIdentifierNFT\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":5000},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/token/ERC721/IERC721.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts (last updated v4.8.0) (token/ERC721/IERC721.sol)\\n\\npragma solidity ^0.8.0;\\n\\nimport \\\"../../utils/introspection/IERC165.sol\\\";\\n\\n/**\\n * @dev Required interface of an ERC721 compliant contract.\\n */\\ninterface IERC721 is IERC165 {\\n    /**\\n     * @dev Emitted when `tokenId` token is transferred from `from` to `to`.\\n     */\\n    event Transfer(address indexed from, address indexed to, uint256 indexed tokenId);\\n\\n    /**\\n     * @dev Emitted when `owner` enables `approved` to manage the `tokenId` token.\\n     */\\n    event Approval(address indexed owner, address indexed approved, uint256 indexed tokenId);\\n\\n    /**\\n     * @dev Emitted when `owner` enables or disables (`approved`) `operator` to manage all of its assets.\\n     */\\n    event ApprovalForAll(address indexed owner, address indexed operator, bool approved);\\n\\n    /**\\n     * @dev Returns the number of tokens in ``owner``'s account.\\n     */\\n    function balanceOf(address owner) external view returns (uint256 balance);\\n\\n    /**\\n     * @dev Returns the owner of the `tokenId` token.\\n     *\\n     * Requirements:\\n     *\\n     * - `tokenId` must exist.\\n     */\\n    function ownerOf(uint256 tokenId) external view returns (address owner);\\n\\n    /**\\n     * @dev Safely transfers `tokenId` token from `from` to `to`.\\n     *\\n     * Requirements:\\n     *\\n     * - `from` cannot be the zero address.\\n     * - `to` cannot be the zero address.\\n     * - `tokenId` token must exist and be owned by `from`.\\n     * - If the caller is not `from`, it must be approved to move this token by either {approve} or {setApprovalForAll}.\\n     * - If `to` refers to a smart contract, it must implement {IERC721Receiver-onERC721Received}, which is called upon a safe transfer.\\n     *\\n     * Emits a {Transfer} event.\\n     */\\n    function safeTransferFrom(\\n        address from,\\n        address to,\\n        uint256 tokenId,\\n        bytes calldata data\\n    ) external;\\n\\n    /**\\n     * @dev Safely transfers `tokenId` token from `from` to `to`, checking first that contract recipients\\n     * are aware of the ERC721 protocol to prevent tokens from being forever locked.\\n     *\\n     * Requirements:\\n     *\\n     * - `from` cannot be the zero address.\\n     * - `to` cannot be the zero address.\\n     * - `tokenId` token must exist and be owned by `from`.\\n     * - If the caller is not `from`, it must have been allowed to move this token by either {approve} or {setApprovalForAll}.\\n     * - If `to` refers to a smart contract, it must implement {IERC721Receiver-onERC721Received}, which is called upon a safe transfer.\\n     *\\n     * Emits a {Transfer} event.\\n     */\\n    function safeTransferFrom(\\n        address from,\\n        address to,\\n        uint256 tokenId\\n    ) external;\\n\\n    /**\\n     * @dev Transfers `tokenId` token from `from` to `to`.\\n     *\\n     * WARNING: Note that the caller is responsible to confirm that the recipient is capable of receiving ERC721\\n     * or else they may be permanently lost. Usage of {safeTransferFrom} prevents loss, though the caller must\\n     * understand this adds an external call which potentially creates a reentrancy vulnerability.\\n     *\\n     * Requirements:\\n     *\\n     * - `from` cannot be the zero address.\\n     * - `to` cannot be the zero address.\\n     * - `tokenId` token must be owned by `from`.\\n     * - If the caller is not `from`, it must be approved to move this token by either {approve} or {setApprovalForAll}.\\n     *\\n     * Emits a {Transfer} event.\\n     */\\n    function transferFrom(\\n        address from,\\n        address to,\\n        uint256 tokenId\\n    ) external;\\n\\n    /**\\n     * @dev Gives permission to `to` to transfer `tokenId` token to another account.\\n     * The approval is cleared when the token is transferred.\\n     *\\n     * Only a single account can be approved at a time, so approving the zero address clears previous approvals.\\n     *\\n     * Requirements:\\n     *\\n     * - The caller must own the token or be an approved operator.\\n     * - `tokenId` must exist.\\n     *\\n     * Emits an {Approval} event.\\n     */\\n    function approve(address to, uint256 tokenId) external;\\n\\n    /**\\n     * @dev Approve or remove `operator` as an operator for the caller.\\n     * Operators can call {transferFrom} or {safeTransferFrom} for any token owned by the caller.\\n     *\\n     * Requirements:\\n     *\\n     * - The `operator` cannot be the caller.\\n     *\\n     * Emits an {ApprovalForAll} event.\\n     */\\n    function setApprovalForAll(address operator, bool _approved) external;\\n\\n    /**\\n     * @dev Returns the account approved for `tokenId` token.\\n     *\\n     * Requirements:\\n     *\\n     * - `tokenId` must exist.\\n     */\\n    function getApproved(uint256 tokenId) external view returns (address operator);\\n\\n    /**\\n     * @dev Returns if the `operator` is allowed to manage all of the assets of `owner`.\\n     *\\n     * See {setApprovalForAll}\\n     */\\n    function isApprovedForAll(address owner, address operator) external view returns (bool);\\n}\\n\",\"keccak256\":\"0xab28a56179c1db258c9bf5235b382698cb650debecb51b23d12be9e241374b68\",\"license\":\"MIT\"},\"@openzeppelin/contracts/utils/introspection/IERC165.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts v4.4.1 (utils/introspection/IERC165.sol)\\n\\npragma solidity ^0.8.0;\\n\\n/**\\n * @dev Interface of the ERC165 standard, as defined in the\\n * https://eips.ethereum.org/EIPS/eip-165[EIP].\\n *\\n * Implementers can declare support of contract interfaces, which can then be\\n * queried by others ({ERC165Checker}).\\n *\\n * For an implementation, see {ERC165}.\\n */\\ninterface IERC165 {\\n    /**\\n     * @dev Returns true if this contract implements the interface defined by\\n     * `interfaceId`. See the corresponding\\n     * https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified[EIP section]\\n     * to learn more about how these ids are created.\\n     *\\n     * This function call must use less than 30 000 gas.\\n     */\\n    function supportsInterface(bytes4 interfaceId) external view returns (bool);\\n}\\n\",\"keccak256\":\"0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1\",\"license\":\"MIT\"},\"contracts/identifier/SDIdentifierNFT.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.13;\\n\\nimport \\\"@openzeppelin/contracts/token/ERC721/IERC721.sol\\\";\\nimport \\\"../interface/ISDIdentifier.sol\\\";\\n\\ncontract SDIdentifierNFT is ISDIdentifier {\\n\\n    string public override name;\\n    string public override description;\\n    address public nft;\\n\\n    constructor(string memory _name, string memory _description, address _nft){\\n        name = _name;\\n        description = _description;\\n        nft = _nft;\\n    }\\n\\n    function identify(address account) external view override returns (bool){\\n        require(IERC721(nft).balanceOf(account) > 0, \\\"SDIdentifierNFT: Identify failed, you don't hold VIP NFT.\\\");\\n        return true;\\n    }\\n\\n}\\n\",\"keccak256\":\"0xa374e1832e750401e4437e575dcb71387952e5310ee74b081e87612cca5460ea\",\"license\":\"MIT\"},\"contracts/interface/ISDIdentifier.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.13;\\n\\ninterface ISDIdentifier {\\n\\n    function name() external view returns (string memory);\\n    function description() external view returns (string memory);\\n    function identify(address account) external view returns (bool);\\n}\\n\",\"keccak256\":\"0x6f65a6e49c371c9eaf2db881e1e6c92da84563dc47b29ddc2993aa8edea8affa\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516106a53803806106a583398101604081905261002f916101da565b825161004290600090602086019061007f565b50815161005690600190602085019061007f565b50600280546001600160a01b0319166001600160a01b0392909216919091179055506102999050565b82805461008b9061025f565b90600052602060002090601f0160209004810192826100ad57600085556100f3565b82601f106100c657805160ff19168380011785556100f3565b828001600101855582156100f3579182015b828111156100f35782518255916020019190600101906100d8565b506100ff929150610103565b5090565b5b808211156100ff5760008155600101610104565b634e487b7160e01b600052604160045260246000fd5b600082601f83011261013f57600080fd5b81516001600160401b038082111561015957610159610118565b604051601f8301601f19908116603f0116810190828211818310171561018157610181610118565b8160405283815260209250868385880101111561019d57600080fd5b600091505b838210156101bf57858201830151818301840152908201906101a2565b838211156101d05760008385830101525b9695505050505050565b6000806000606084860312156101ef57600080fd5b83516001600160401b038082111561020657600080fd5b6102128783880161012e565b9450602086015191508082111561022857600080fd5b506102358682870161012e565b604086015190935090506001600160a01b038116811461025457600080fd5b809150509250925092565b600181811c9082168061027357607f821691505b60208210810361029357634e487b7160e01b600052602260045260246000fd5b50919050565b6103fd806102a86000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c806306fdde031461005157806347ccca021461006f5780634d207d9a146100b45780637284e416146100d7575b600080fd5b6100596100df565b60405161006691906102ab565b60405180910390f35b60025461008f9073ffffffffffffffffffffffffffffffffffffffff1681565b60405173ffffffffffffffffffffffffffffffffffffffff9091168152602001610066565b6100c76100c236600461031e565b61016d565b6040519015158152602001610066565b61005961029e565b600080546100ec9061035b565b80601f01602080910402602001604051908101604052809291908181526020018280546101189061035b565b80156101655780601f1061013a57610100808354040283529160200191610165565b820191906000526020600020905b81548152906001019060200180831161014857829003601f168201915b505050505081565b6002546040517f70a0823100000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff838116600483015260009283929116906370a0823190602401602060405180830381865afa1580156101e1573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061020591906103ae565b11610296576040517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152603960248201527f53444964656e7469666965724e46543a204964656e74696679206661696c656460448201527f2c20796f7520646f6e277420686f6c6420564950204e46542e00000000000000606482015260840160405180910390fd5b506001919050565b600180546100ec9061035b565b600060208083528351808285015260005b818110156102d8578581018301518582016040015282016102bc565b818111156102ea576000604083870101525b50601f017fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe016929092016040019392505050565b60006020828403121561033057600080fd5b813573ffffffffffffffffffffffffffffffffffffffff8116811461035457600080fd5b9392505050565b600181811c9082168061036f57607f821691505b6020821081036103a8577f4e487b7100000000000000000000000000000000000000000000000000000000600052602260045260246000fd5b50919050565b6000602082840312156103c057600080fd5b505191905056fea26469706673582212202219ef53111289c4d5657a315b5ad2dbb0a56bd755fbb8399b9b5afeecb015be64736f6c634300080d0033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c806306fdde031461005157806347ccca021461006f5780634d207d9a146100b45780637284e416146100d7575b600080fd5b6100596100df565b60405161006691906102ab565b60405180910390f35b60025461008f9073ffffffffffffffffffffffffffffffffffffffff1681565b60405173ffffffffffffffffffffffffffffffffffffffff9091168152602001610066565b6100c76100c236600461031e565b61016d565b6040519015158152602001610066565b61005961029e565b600080546100ec9061035b565b80601f01602080910402602001604051908101604052809291908181526020018280546101189061035b565b80156101655780601f1061013a57610100808354040283529160200191610165565b820191906000526020600020905b81548152906001019060200180831161014857829003601f168201915b505050505081565b6002546040517f70a0823100000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff838116600483015260009283929116906370a0823190602401602060405180830381865afa1580156101e1573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061020591906103ae565b11610296576040517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152603960248201527f53444964656e7469666965724e46543a204964656e74696679206661696c656460448201527f2c20796f7520646f6e277420686f6c6420564950204e46542e00000000000000606482015260840160405180910390fd5b506001919050565b600180546100ec9061035b565b600060208083528351808285015260005b818110156102d8578581018301518582016040015282016102bc565b818111156102ea576000604083870101525b50601f017fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe016929092016040019392505050565b60006020828403121561033057600080fd5b813573ffffffffffffffffffffffffffffffffffffffff8116811461035457600080fd5b9392505050565b600181811c9082168061036f57607f821691505b6020821081036103a8577f4e487b7100000000000000000000000000000000000000000000000000000000600052602260045260246000fd5b50919050565b6000602082840312156103c057600080fd5b505191905056fea26469706673582212202219ef53111289c4d5657a315b5ad2dbb0a56bd755fbb8399b9b5afeecb015be64736f6c634300080d0033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 8645,
+        "contract": "contracts/identifier/SDIdentifierNFT.sol:SDIdentifierNFT",
+        "label": "name",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_string_storage"
+      },
+      {
+        "astId": 8648,
+        "contract": "contracts/identifier/SDIdentifierNFT.sol:SDIdentifierNFT",
+        "label": "description",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_string_storage"
+      },
+      {
+        "astId": 8650,
+        "contract": "contracts/identifier/SDIdentifierNFT.sol:SDIdentifierNFT",
+        "label": "nft",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_address"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_string_storage": {
+        "encoding": "bytes",
+        "label": "string",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}

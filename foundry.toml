@@ -1,0 +1,14 @@
+[profile.default]
+src = 'contracts'
+out = 'artifacts-forge'
+cache_path  = 'cache-forge'
+libs = ["node_modules", "lib"]
+solc = "0.8.13"
+remappings = [
+    '@ensdomains/=node_modules/@ensdomains/',
+    '@openzeppelin/=node_modules/@openzeppelin/',
+    'hardhat-deploy/=node_modules/hardhat-deploy/',
+    'hardhat/=node_modules/hardhat/',
+]
+
+# See more config options https://github.com/foundry-rs/foundry/tree/master/config
