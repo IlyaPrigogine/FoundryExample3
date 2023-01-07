@@ -22,4 +22,9 @@ contract Instance {
         tokenA = _tokenA;
         tokenB = _tokenB;
     }
+
+    function deposit(address _token, uint _depositAmount) external {
+        require ((_token == tokenA) || (_token == tokenB), "only TokenA or TokenB");
+        SafeERC20.safeTransferFrom(IERC20(_token), msg.sender, address(this), _depositAmount);
+    }
 }

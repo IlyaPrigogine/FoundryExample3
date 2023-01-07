@@ -6,7 +6,7 @@ contract Factory {
     address[] public instances;
     mapping (address => mapping(address => bool)) public pairs;
 
-    function create(string memory _name, string memory _desc, address _tokenA, address _tokenB) external {
+    function create(string memory _name, string memory _desc, address _tokenA, address _tokenB) external returns(address){
         require(pairs[_tokenA][_tokenB] == false, "duplicate");
         require(pairs[_tokenB][_tokenA] == false, "duplicate");
 
@@ -16,5 +16,7 @@ contract Factory {
         pairs[_tokenA][_tokenB] = true;
         pairs[_tokenB][_tokenA] = true;
         instances.push(address(ins));
+
+        return address(ins);
     }
 }
