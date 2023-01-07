@@ -6,7 +6,6 @@ import "../contracts/Factory.sol";
 
 contract FactoryTest is Test {
     Factory public factory;
-    event AirdropCreated(address indexed account, address indexed token);
 
     function setUp() public {
         factory = new Factory();
