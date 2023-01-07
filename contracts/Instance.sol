@@ -11,6 +11,9 @@ contract Instance {
     string public name;
     string public desc;
 
+    uint public balanceA;
+    uint public balanceB;
+
     constructor () {
         factory = msg.sender;
     }
@@ -25,6 +28,13 @@ contract Instance {
 
     function deposit(address _token, uint _depositAmount) external {
         require ((_token == tokenA) || (_token == tokenB), "only TokenA or TokenB");
+
+        if (_token == tokenA) {
+            balanceA += _depositAmount;
+        } else if (_token == tokenB) {
+            balanceB += _depositAmount;
+        }
+
         SafeERC20.safeTransferFrom(IERC20(_token), msg.sender, address(this), _depositAmount);
     }
 }
