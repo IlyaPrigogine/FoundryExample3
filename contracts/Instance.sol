@@ -5,11 +5,21 @@ import "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
 contract Instance {
     address public factory;
 
+    address public tokenA;
+    address public tokenB;
+
+    string public name;
+    string public desc;
+
     constructor () {
         factory = msg.sender;
     }
 
-    function initialize() external {
-
+    function initialize(string memory _name, string memory _desc, address _tokenA, address _tokenB) external {
+        require(msg.sender == factory, "only factory");
+        name = _name;
+        desc = _desc;
+        tokenA = _tokenA;
+        tokenB = _tokenB;
     }
 }
