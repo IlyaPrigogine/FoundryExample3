@@ -3,13 +3,13 @@ pragma solidity ^0.8.13;
 
 import "forge-std/Test.sol";
 import "../contracts/Factory.sol";
-import "../contracts/Airdrop.sol";
+import "../contracts/Instance.sol";
 import "../contracts/mock/MockDAI.sol";
 
 contract AirdropTest is Test {
     Factory public factory;
     MockDAI public dai;
-    Airdrop public airdrop;
+    Instance public airdrop;
     event AirdropCreated(address indexed account, address indexed token);
 
     address public user1;
