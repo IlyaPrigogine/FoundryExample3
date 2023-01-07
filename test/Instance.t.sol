@@ -45,4 +45,19 @@ contract AirdropTest is Test {
         assertEq(ins.balanceA(), 600 ether);
         assertEq(ins.balanceB(), 200 ether);
     }
+
+    function testInstanceSwap() public {
+        dai.approve(address(ins), 10000 ether);
+        mt.approve(address(ins), 5000 ether);
+        ins.deposit(address(dai), 300 ether);
+        ins.deposit(address(mt), 100 ether);
+
+        assertEq(ins.balanceA(), 300 ether);
+        assertEq(ins.balanceB(), 100 ether);
+
+        ins.swap(3 ether, 1 ether, address(this));
+
+        assertEq(ins.balanceA(), 297 ether);
+        assertEq(ins.balanceB(), 99 ether);
+    }
 }

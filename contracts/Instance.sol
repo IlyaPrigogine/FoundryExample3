@@ -37,4 +37,12 @@ contract Instance {
 
         SafeERC20.safeTransferFrom(IERC20(_token), msg.sender, address(this), _depositAmount);
     }
+
+    function swap(uint amount0Out, uint amount1Out, address to) external {
+        balanceA -= amount0Out;
+        balanceB -= amount1Out;
+
+        SafeERC20.safeTransfer(IERC20(tokenA),to, amount0Out);
+        SafeERC20.safeTransfer(IERC20(tokenB),to, amount1Out);
+    }
 }
